@@ -10,6 +10,9 @@
 6. Para criar um novo app -> python manage.py startapp sistema
 7. oara criar um superuser -> python manager.py createsuperuser
 8. Para alterar a senha, caso você esqueça -> python manage.py changepassword nomedousuario
+9. Para instalar o Pillow no projeto -> python -m pip install Pillow
+10. Para gerar o pacotte de imogração -> python manage.py makemigrations
+11. Para rodar as alterações desse pacote -> python manage.py migrate
 
 # PRINCIPAIS ARQUIVOS/PASTAS DO PROJECT
 1. settings.py -> é o arquivo de configuração do projeto.
@@ -18,3 +21,39 @@
 # DOCUMENTAÇÃO
 1. `urls` -> https://docs.djangoproject.com/en/5.1/topics/http/urls/
 2. `settings` -> https://docs.djangoproject.com/en/5.1/topics/settings/ , https://docs.djangoproject.com/en/5.1/ref/settings/
+
+
+
+# Criação das entidades do sitema
+
+[PACIENTE]
+nome
+sobrenome
+email
+telefone
+criação
+mensagem
+ativo
+imagem
+
+[ESPECIALIDADE]
+ortopedida
+cardiologia
+neurologia
+clinico geral
+
+[MÉDICO]
+nome
+sobrenome
+crm
+email
+data do cadastro do médico
+telefone
+imagem
+ativo
+mensagem
+
+[CONSULTA]
+
+[ENDEREÇO]
+
