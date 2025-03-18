@@ -7,4 +7,5 @@ app_name = 'sistema'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('marcos/', views.marcos),
 ]

@@ -7,4 +7,10 @@ def index(request):
         'global/base.html'
     )
 
+def marcos(request):
+    return render(
+        request,
+        'global/marcos.html'
+    )
+
 # REQUEST - RESPONSE - RENDER
