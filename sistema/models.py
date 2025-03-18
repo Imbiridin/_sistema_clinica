@@ -37,6 +37,7 @@ class Medico(models.Model):
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/%Y/%m', blank=True)
+    especialidade = models.ForeignKey(Especialidade, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'

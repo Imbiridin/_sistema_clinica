@@ -20,6 +20,6 @@ class EspecialidadeAdmin(admin.ModelAdmin):
 
 @admin.register(models.Medico)
 class MedicoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'sobrenome', 'crm', 'email', 'telefone', 'ativo',)
+    list_display = ('id', 'nome', 'sobrenome', 'crm', 'especialidade', 'email', 'telefone', 'ativo',)
     list_editable = ('ativo',)
     search_fields = ('id', 'nome', 'crm',)
