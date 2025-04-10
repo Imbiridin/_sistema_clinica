@@ -8,6 +8,6 @@ app_name = 'sistema'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('listar/', views.listarPacientes, name= 'listar'),
-    path('listarmedicos/', views.listarMedicos, name= 'listar'),
+    path('pacientes/', views.listarPacientes, name= 'pacientes'),
+    path('medicos/', views.listarMedicos, name= 'medicos'),
 ]
