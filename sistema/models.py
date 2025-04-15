@@ -37,10 +37,12 @@ class Medico(models.Model):
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/%Y/%m', blank=True)
-    especialidade = models.ForeignKey(Especialidade, default=1, on_delete=models.CASCADE)
+    especialidade = models.ForeignKey(Especialidade, default=1, on_delete=models.CASCADE, verbose_name='Especialidade')
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
+    
+    class Meta():
     
 class Consulta(models.Model):
     paciente_id = models.ForeignKey(Paciente, on_delete=models.CASCADE, null=True)
