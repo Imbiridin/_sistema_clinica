@@ -14,7 +14,7 @@ class Paciente(models.Model):
     criacao_data = models.DateTimeField(default=timezone.now)
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)
-    iamgem = models.ImageField(upload_to='img/%Y/%m/', blank=True)
+    imagem = models.ImageField(upload_to='img/%Y/%m/', blank=True)
     
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'

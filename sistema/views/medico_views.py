@@ -15,9 +15,11 @@ def listarMedicos(request):
         context,
     )
 
+
+
 def criarMedico(request):
     if request.method == 'POST':
-        form = MedicoForm(request.POST)
+        form = MedicoForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect( '/medicos')

@@ -12,7 +12,7 @@ class PacienteForm(forms.ModelForm):
 class MedicoForm(forms.ModelForm):
     class Meta:
         model = Medico
-        fields = ['nome', 'sobrenome', 'email', 'telefone',]
+        fields = ['nome', 'sobrenome', 'email', 'telefone', 'crm', 'especialidade',]
 
 
 
