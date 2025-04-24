@@ -12,14 +12,15 @@
                     <th class="table-header">SOBRENOME</th>
                     <th class="table-header">EMAIL</th>
                     <th class="table-header">TELEFONE</th>
+                    <th class="table-header">IMAGEM</th>
                 </tr>
             </thead>
 
             <tbody>
                 {% for paciente in pacientes %}
                     <tr class="table-row">
-                        <td class="table-cel">
-                            {{ paciente.id }}
+                        <td class="table-cel"><a class='table-link' href="{% url 'sistema:perfil_paciente' paciente.id %}">
+                            {{ paciente.id }}</a>
                         </td>
                         <td class="table-cel">
                             {{ paciente.nome }}
@@ -32,6 +33,13 @@
                         </td>
                         <td class="table-cel">
                             {{ paciente.telefone }}
+                        </td>
+                        <td class="table-cel">
+                            {% if paciente.imagem  %}
+                                <img src="{{paciente.imagem.url}}" alt="Imagem do paciente" style="max-height: 80px;">
+                            {% else %}
+                                sem imagem
+                            {% endif %}
                         </td>
                     </tr>
                 {% endfor %}

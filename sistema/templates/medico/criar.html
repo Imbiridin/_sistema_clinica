@@ -2,7 +2,7 @@
 
 <!-- Formulário que envia os dados via POST e aceita enviar arquivos-->
 
-<form method='POST' enctype= 'multipart/form-data'>
+<form method='POST'>
     {% csrf_token %} <!-- Proteção contra ataques do tipo CSRF (Obrigatório)-->
 
     <!-- Exibição dos campos para enviar o fomulário -->

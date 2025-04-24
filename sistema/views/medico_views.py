@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from sistema.forms import MedicoForm
 from sistema.models import Medico
 
@@ -28,6 +28,6 @@ def criarMedico(request):
 
     return render(
         request,
-        'medico/cadastro.html',
+        'medico/criar.html',
         {'form': form}    
     )

@@ -41,9 +41,7 @@ class Medico(models.Model):
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
-    
-    class Meta():
-    
+
 class Consulta(models.Model):
     paciente_id = models.ForeignKey(Paciente, on_delete=models.CASCADE, null=True)
     medico_id = models.ForeignKey(Medico, on_delete=models.CASCADE, null=True)
