@@ -119,12 +119,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-SATICFILES_DIRS = (
+STATICFILES_DIRS = (
     BASE_DIR / 'base_static',
 )
 
 # MEDIA_URL -> É um caminho URL para acessar imagens.
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 # MEDIA_ROOT -> É um caminho onde os arquivos realmente serão salvos.
 MEDIA_ROOT = BASE_DIR / 'media'
 # STATIC_ROOT -> É um caminho onde os arquivos estáticos são coletados.
