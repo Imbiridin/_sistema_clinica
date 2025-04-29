@@ -1,14 +1,37 @@
-<h1>Cadastrar Paciente</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    {% include "global/partials/_head.html" %}
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a href="#" class="logo"
+          ><img src={% static "/global/assets/logo.svg" %} alt="Logo da
+          consulta.me"></a
+        >
+        <div class="navbar-form">
+          <a href="#" class="btn-link">Login</a>
+        </div>
+      </div>
+    </header>
+    <h1>Cadastrar Paciente</h1>
 
-<!-- Formulário que envia os dados via POST e aceita enviar arquivos-->
+    <!-- Formulário que envia os dados via POST e aceita enviar arquivos-->
 
-<form method='POST'>
-    {% csrf_token %} <!-- Proteção contra ataques do tipo CSRF (Obrigatório)-->
+    <form method="POST">
+      {% csrf_token %}
+      <!-- Proteção contra ataques do tipo CSRF (Obrigatório)-->
 
-    <!-- Exibição dos campos para enviar o fomulário -->
+      <!-- Exibição dos campos para enviar o fomulário -->
 
-    {{ form.as_p }}
-    <!-- Exibir as informções do forms como parágrafos -->
+      {{ form.as_p }}
+      <!-- Exibir as informções do forms como parágrafos -->
 
-    <button type='submit'>Salvar</button>
-</form>
+      <button type="submit">Salvar</button>
+    </form>
+
+    <footer>{% include "global/partials/_footer.html" %}</footer>
+  </body>
+</html>

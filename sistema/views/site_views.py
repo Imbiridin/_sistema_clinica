@@ -7,4 +7,10 @@ def index(request):
         'global/base.html'
     )
 
+def login(request):
+    return render(
+        request,
+        'usuario/login.html'
+    )
+
 # REQUEST - RESPONSE - RENDER
